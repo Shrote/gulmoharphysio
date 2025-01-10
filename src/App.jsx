@@ -6,6 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
+import About from "../pages/about";
+import Contact from "../pages/contact";
 
 
 const Home = lazy(() => import("../pages/home"));
@@ -30,6 +32,8 @@ function App() {
     <Router>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
     </Router>
   );
