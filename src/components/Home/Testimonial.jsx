@@ -2,6 +2,35 @@ import React, { useEffect } from "react";
 
 function Testimonial()
 {
+    const testimonials = [
+        {
+            "image":"img/testimonial-img.jpg",
+            "name":"Vishal kumar",
+            "location":"Ranchi, India",
+            "comment":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!",
+            "rating":5
+        },
+        {
+            "image":"img/testimonial-img.jpg",
+            "name":"Anmol Gupta",
+            "location":"Ranchi, India",
+            "comment":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!",
+            "rating":4
+        }
+    ]
+
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+            if (i < rating) {
+                stars.push(<i key={i} className="fas fa-star text-secondary"></i>);
+            } else {
+                stars.push(<i key={i} className="fas fa-star text-muted"></i>);
+            }
+        }
+        return stars;
+    };
+
     useEffect(()=>{
         $(".testimonial-carousel").owlCarousel({
           autoplay: true,
@@ -45,66 +74,25 @@ function Testimonial()
                     <h1 className="display-3 mb-4">What Clients are Say</h1>
                 </div>
                 <div className="testimonial-carousel owl-carousel">
-                    <div className="testimonial-item">
-                        <div className="testimonial-inner p-5">
-                            <div className="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" className="img-fluid rounded-circle" alt="" />
-                            </div>
-                            <p className="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div className="text-center">
-                                <h5 className="mb-2">John Abraham</h5>
-                                <p className="mb-2 text-white-50">New York, USA</p>
-                                <div className="d-flex justify-content-center">
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
+                    {testimonials.map((testimonial,index)=>(
+                        <div className="testimonial-item" key={index}>
+                            <div className="testimonial-inner p-5">
+                                <div className="testimonial-inner-img mb-4">
+                                    <img src={testimonial.image} className="img-fluid rounded-circle" alt="" />
+                                </div>
+                                <p className="text-white fs-7">{testimonial.comment}
+                                </p>
+                                <div className="text-center">
+                                    <h5 className="mb-2">{testimonial.name}</h5>
+                                    <p className="mb-2 text-white-50">{testimonial.location}</p>
+                                    
+                                    <div className="d-flex justify-content-center">
+                                    {renderStars(testimonial.rating)}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="testimonial-item">
-                        <div className="testimonial-inner p-5">
-                            <div className="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" className="img-fluid rounded-circle" alt="" />
-                            </div>
-                            <p className="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div className="text-center">
-                                <h5 className="mb-2">John Abraham</h5>
-                                <p className="mb-2 text-white-50">New York, USA</p>
-                                <div className="d-flex justify-content-center">
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial-item">
-                        <div className="testimonial-inner p-5">
-                            <div className="testimonial-inner-img mb-4">
-                                <img src="img/testimonial-img.jpg" className="img-fluid rounded-circle" alt="" />
-                            </div>
-                            <p className="text-white fs-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                            </p>
-                            <div className="text-center">
-                                <h5 className="mb-2">John Abraham</h5>
-                                <p className="mb-2 text-white-50">New York, USA</p>
-                                <div className="d-flex justify-content-center">
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                    <i className="fas fa-star text-secondary"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -21,9 +21,6 @@ function Appointment()
                                             <h5 className="mb-3"><i className="fa fa-check text-primary me-2"></i> Body Relaxation</h5>
                                             <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt qui cupiditate veritatis enim ducimus.</p>
                                         </div>
-                                        <div className="text-start mb-4">
-                                            <a href="#" className="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-6">
@@ -88,19 +85,25 @@ function Appointment()
             <div className="modal-dialog">
                 <div className="modal-content rounded-0">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <h5 className="modal-title" id="exampleModalLabel">YouTube Video</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
                         {/* 16:9 aspect ratio */}
                         <div className="ratio ratio-16x9">
-                            <iframe className="embed-responsive-item" src="" id="video" allowFullScreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+                            <iframe
+                                className="embed-responsive-item"
+                                src="https://www.youtube.com/embed/-pvt6tQsOqQ"
+                                id="video"
+                                allowFullScreen
+                                allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </>
     )
 }

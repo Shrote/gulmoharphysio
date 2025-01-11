@@ -1,5 +1,58 @@
+import TeamCard from "../../cards/TeamCard"
+
 function Teams()
 {
+    const teams = [
+        {
+          "delay": "0.1s",
+          "image": "img/team-1.jpg",
+          "socialLinks": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": ""
+          },
+          "name": "Full Name",
+          "designation": "Message Physio Therapist"
+        },
+        {
+          "delay": "0.3s",
+          "image": "img/team-2.jpg",
+          "socialLinks": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": ""
+          },
+          "name": "Full Name",
+          "designation": "Rehabilitation Therapist"
+        },
+        {
+          "delay": "0.5s",
+          "image": "img/team-3.jpg",
+          "socialLinks": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": ""
+          },
+          "name": "Full Name",
+          "designation": "Doctor of Physical therapy"
+        },
+        {
+          "delay": "0.7s",
+          "image": "img/team-4.jpg",
+          "socialLinks": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": ""
+          },
+          "name": "Full Name",
+          "designation": "Doctor of Physical therapy"
+        }
+      ]
+      
     return(
         <div className="container-fluid team py-5">
             <div className="container py-5">
@@ -11,74 +64,16 @@ function Teams()
                     <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
                 </div>
                 <div className="row g-4 justify-content-center">
-                    <div className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div className="team-item rounded">
-                            <div className="team-img rounded-top h-100">
-                                <img src="img/team-1.jpg" className="img-fluid rounded-top w-100" alt="" />
-                                <div className="team-icon d-flex justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div className="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p className="mb-0">Message Physio Therapist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div className="team-item rounded">
-                            <div className="team-img rounded-top h-100">
-                                <img src="img/team-2.jpg" className="img-fluid rounded-top w-100" alt="" />
-                                <div className="team-icon d-flex justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div className="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p className="mb-0">Rehabilitation Therapist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div className="team-item rounded">
-                            <div className="team-img rounded-top h-100">
-                                <img src="img/team-3.jpg" className="img-fluid rounded-top w-100" alt="" />
-                                <div className="team-icon d-flex justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div className="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p className="mb-0">Doctor of Physical therapy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div className="team-item rounded">
-                            <div className="team-img rounded-top h-100">
-                                <img src="img/team-4.jpg" className="img-fluid rounded-top w-100" alt="" />
-                                <div className="team-icon d-flex justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div className="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Full Name</h5>
-                                <p className="mb-0">Doctor of Physical therapy</p>
-                            </div>
-                        </div>
-                    </div>
+                    {teams.map((team,index)=>(
+                        <TeamCard
+                        key={index}
+                        image = {team.image}
+                        name = {team.name}
+                        designation = {team.designation}
+                        socialLinks = {team.socialLinks}
+                        delay = {team.delay}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
