@@ -12,7 +12,9 @@ function appointment() {
   return (
     <>
         <TopBar />
+        <div className="container-fluid position-relative p-0">
         <NavBar />
+        </div>
         <Header route="Appointment" title="Book Appointment" img="carousel-2.jpg"/>
         <Appointment/>
         <Footer/>

@@ -26,7 +26,7 @@ function Home() {
         <Feature/>
         <Appointment/>
         <Testimonial/>
-        <Blog/>
+        <Blog limit="3"/>
         <Footer/>
         <ToTop/>
     </>

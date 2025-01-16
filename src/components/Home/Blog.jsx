@@ -1,6 +1,6 @@
 import BlogCard from "../../cards/BlogCard"
 
-function Blog()
+function Blog({ limit })
 {
     const blogs = [
         {
@@ -27,7 +27,11 @@ function Blog()
             "link": "#",
             "delay":"0.5s",
         }
-      ]
+    ]
+
+    const displayedBlogs =
+    limit === "all" ? blogs : blogs.slice(0, parseInt(limit, 10));
+
     return(
         <div className="container-fluid blog py-5">
             <div className="container py-5">
@@ -39,7 +43,7 @@ function Blog()
                     <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
                 </div>
                 <div className="row g-4 justify-content-center">
-                {blogs.map((blog,index)=>(
+                {displayedBlogs.map((blog,index)=>(
                     <BlogCard
                     key = {index}
                     title = {blog.title}
@@ -50,7 +54,14 @@ function Blog()
                     delay = {blog.delay}
                     />
                    ))
-                   }
+                }
+                {limit !== "all" && (
+                    <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/services">
+                        Blogs More
+                    </a>
+                    </div>
+                )}
                 </div>
             </div>
         </div>

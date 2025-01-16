@@ -12,7 +12,9 @@ function Home() {
   return (
     <>
         <TopBar />
+        <div className="container-fluid position-relative p-0">
         <NavBar />
+        </div>
         <Header route="About" title="About Us" img="carousel-2.jpg"/>
         <Teams/>
         <Footer/>
