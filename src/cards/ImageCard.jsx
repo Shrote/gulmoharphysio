@@ -1,7 +1,7 @@
 function ImageCard(cardData)
 {
     return(
-        <div className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div className="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay={cardData.delay}>
             <div className="service-item rounded">
                 <div className="service-img rounded-top">
                     <img src={`/${cardData.img}`} className="img-fluid rounded-top w-100" alt="" />

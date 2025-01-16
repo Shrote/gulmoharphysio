@@ -22,7 +22,7 @@ function Home() {
             <Carousel />
         </div>
         <About/>
-        <Services/>
+        <Services limit="4"/>
         <Feature/>
         <Appointment/>
         <Testimonial/>

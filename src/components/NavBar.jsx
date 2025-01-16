@@ -22,12 +22,15 @@ function NavBar()
                     <a href="/about" className={`nav-item nav-link ${isActive('/about') ? 'active' : ''}`}>
                         About
                     </a>
+                    <a href="/services" className={`nav-item nav-link ${isActive('/services') ? 'active' : ''}`}>
+                        Services
+                    </a>
                     <a href="/contact" className={`nav-item nav-link ${isActive('/contact') ? 'active' : ''}`}>
                         Contact Us
                     </a>
                     </div>
                     <a
-                    href="#"
+                    href="/appointment"
                     className="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
                     >
                     Book Appointment

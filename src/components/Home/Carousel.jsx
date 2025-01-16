@@ -27,7 +27,7 @@ function Carousel()
                     <h1 className="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
                     <p className="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     </p>
-                    <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Book Appointment</a>
+                    <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/appointment">Book Appointment</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@ function Carousel()
                     <h1 className="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
                     <p className="mb-5 fs-5 animated slideInDown">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     </p>
-                    <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Book Appointment</a>
+                    <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/appointment">Book Appointment</a>
                 </div>
             </div>
         </div>
