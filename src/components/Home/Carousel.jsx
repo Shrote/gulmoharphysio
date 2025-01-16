@@ -23,9 +23,8 @@ function Carousel()
             <img src="img/carousel-1.jpg" className="img-fluid w-100" alt="Image" />
             <div className="carousel-caption">
                 <div className="carousel-caption-content p-3">
-                    <h5 className="text-white text-uppercase fw-bold mb-4" style={{letterSpacing: "3px"}}>Physiotherapy Center</h5>
-                    <h1 className="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
-                    <p className="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    <h1 className="display-1 text-capitalize text-white mb-4">Reclaim a Pain-Free Life with Gulmohar</h1>
+                    <p className="mb-5 fs-5">Expert care, personalized treatments, and a compassionate approach to help you get back to what you love 
                     </p>
                     <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/appointment">Book Appointment</a>
                 </div>
@@ -35,10 +34,8 @@ function Carousel()
             <img src="img/carousel-2.jpg" className="img-fluid w-100" alt="Image" />
             <div className="carousel-caption">
                 <div className="carousel-caption-content p-3">
-                    <h5 className="text-white text-uppercase fw-bold mb-4" style={{letterSpacing: "3px"}}>Physiotherapy Center</h5>
-                    <h1 className="display-1 text-capitalize text-white mb-4">Best Solution For Painful Life</h1>
-                    <p className="mb-5 fs-5 animated slideInDown">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    </p>
+                    <h1 className="display-1 text-capitalize text-white mb-4">Your Path to Wellness Starts Here</h1>
+                    <p className="mb-5 fs-5 animated slideInDown">Our dedicated physiotherapists use advanced techniques to provide lasting relief and support your full recovery</p>
                     <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/appointment">Book Appointment</a>
                 </div>
             </div>

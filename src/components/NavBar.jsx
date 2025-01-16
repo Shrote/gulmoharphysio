@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function NavBar()
@@ -8,8 +7,7 @@ function NavBar()
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <Link to="/" className="navbar-brand p-0">
-                    <h1 className="text-primary m-0">Gulmohar</h1>
-                    <img src="img/blog-1.jpg" alt="Logo" />
+                    <img src="/img/logo.png" alt="Logo" />
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span className="fa fa-bars"></span>
