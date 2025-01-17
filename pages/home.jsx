@@ -8,6 +8,7 @@ import Testimonial from "../src/components/Home/Testimonial";
 import Blog from "../src/components/Home/Blog";
 import Footer from "../src/components/Footer";
 import ToTop from "../src/utils/ToTop";
+import Gallery from "../src/components/Home/Gallery";
 
 
 
@@ -25,6 +26,7 @@ function Home() {
         <Feature/>
         <Appointment/>
         <Testimonial/>
+        <Gallery limit="4"/>
         <Blog limit="3"/>
         <Footer/>
         <ToTop/>

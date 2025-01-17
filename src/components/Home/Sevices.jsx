@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ImageCard from "../../cards/ImageCard";
 
 function Services({ limit }) {
@@ -82,9 +83,9 @@ function Services({ limit }) {
 
           {limit !== "all" && (
             <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-              <a className="btn btn-primary rounded-pill text-white py-3 px-5" href="/services">
+              <Link className="btn btn-primary rounded-pill text-white py-3 px-5" to="/services">
                 Services More
-              </a>
+              </Link>
             </div>
           )}
           

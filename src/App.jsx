@@ -11,6 +11,7 @@ import Contact from "../pages/contact";
 import Services from "../pages/services";
 import Appointment from "../pages/appointment";
 import Blogs from "../pages/blogs";
+import Gallery from "../pages/gallery";
 
 const Home = lazy(() => import("../pages/home"));
 
@@ -20,7 +21,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2800); // Extended loading duration to 5800ms
+    }, 2800); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -38,6 +39,7 @@ function App() {
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/services" element={<Services />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </Router>
   );

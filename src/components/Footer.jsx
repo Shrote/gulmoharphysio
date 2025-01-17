@@ -27,6 +27,7 @@ function Footer()
                             <a href=""><i className="fas fa-angle-right me-2"></i> Privacy Policy</a>
                             <a href=""><i className="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                             <a href="/blogs"><i className="fas fa-angle-right me-2"></i> Our Blog & News</a>
+                            <a href="/gallery"><i className="fas fa-angle-right me-2"></i> Our Gallery</a>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-3">
