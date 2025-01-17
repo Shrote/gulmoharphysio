@@ -20,9 +20,9 @@ function About()
                         
                         <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
                         <div className="mb-4">
-                            <p className="text-secondary"><i className="fa fa-check text-primary me-2"></i> Refresing to get such a personal touch.</p>
-                            <p className="text-secondary"><i className="fa fa-check text-primary me-2"></i> Duis aute irure dolor in reprehenderit in voluptate.</p>
-                            <p className="text-secondary"><i className="fa fa-check text-primary me-2"></i> Velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p className="text-primary"><i className="fa fa-check text-primary me-2"></i> Refresing to get such a personal touch.</p>
+                            <p className="text-primary"><i className="fa fa-check text-primary me-2"></i> Duis aute irure dolor in reprehenderit in voluptate.</p>
+                            <p className="text-primary"><i className="fa fa-check text-primary me-2"></i> Velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         </div>
                         <div className="d-flex align-items-center">
                             <a className="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i className="fab fa-facebook-f"></i></a>

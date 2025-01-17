@@ -1183,6 +1183,15 @@
 }
 /*** copyright end ***/
 
+
+.text-primary{
+    color: var(--bs-primary) !important;
+}
+
+a{
+    color: var(--bs-primary);
+}
+
 @media only screen and (max-width: 450px) {
     .sub-title::before {
         content: "";

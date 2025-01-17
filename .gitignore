@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+pages/
+src/components/Home/Awards.jsx
+src/components/css/ScrollableGallery.module.css
