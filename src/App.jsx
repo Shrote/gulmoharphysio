@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import PreLoader from "./utils/PreLoader";
+import ScrollToTop from "./utils/ScrollToTop"; // Import ScrollToTop component
 import About from "../pages/about";
 import Contact from "../pages/contact";
 import Services from "../pages/services";
@@ -32,6 +32,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -9,6 +9,7 @@ import Blog from "../src/components/Home/Blog";
 import Footer from "../src/components/Footer";
 import ToTop from "../src/utils/ToTop";
 import Gallery from "../src/components/Home/Gallery";
+import Awards from "../src/components/Home/Awards";
 
 
 
@@ -23,6 +24,7 @@ function Home() {
         </div>
         <About/>
         <Services limit="4"/>
+        {/* <Awards /> */}
         <Feature/>
         <Appointment/>
         <Testimonial/>
