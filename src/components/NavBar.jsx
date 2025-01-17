@@ -6,8 +6,8 @@ function NavBar()
     const isActive = (path) => location.pathname === path;
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <Link to="/" className="navbar-brand p-0">
-                    <img src="/img/logo.png" alt="Logo" />
+                <Link to="/" className="navbar-brand">
+                    <img src="/img/logo.png" height={80} alt="Logo" />
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span className="fa fa-bars"></span>
