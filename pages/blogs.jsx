@@ -11,7 +11,7 @@ function Blogs() {
 
   return (
     <>
-        <TopBar />
+        {/* <TopBar /> */}
         <div className="container-fluid position-relative p-0">
         <NavBar />
         </div>
