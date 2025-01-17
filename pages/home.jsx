@@ -1,4 +1,3 @@
-import TopBar from "../src/components/Topbar";
 import NavBar from "../src/components/NavBar";
 import Carousel from "../src/components/Home/Carousel";
 import About from "../src/components/Home/About";

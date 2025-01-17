@@ -1,4 +1,3 @@
-import TopBar from "../src/components/Topbar";
 import NavBar from "../src/components/NavBar";
 import Footer from "../src/components/Footer";
 import ToTop from "../src/utils/ToTop";
