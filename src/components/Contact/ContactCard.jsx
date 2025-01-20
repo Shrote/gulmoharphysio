@@ -72,8 +72,8 @@ function ContactCard()
                             <div className="d-flex flex-column align-items-center text-center">
                                 <div className="bg-white d-flex align-items-center justify-content-center mb-3" style={{width: "90px", height: "90px", borderRadius: "50px"}}><i className="fa fa-envelope-open fa-2x text-primary"></i></div>
                                 <h4 className="text-dark">Email</h4>
-                                <p className="mb-0"><a href="mailto:ranjanrajeev555@gmail.com" class="text-white">ranjanrajeev555@gmail.com</a></p>
-                                <p className="mb-0 text-white">info@example.com</p>
+                                <p className="mb-0"><a href="mailto:gulmoharphysio@gmail.com" class="text-white">gulmoharphysio@gmail.com</a></p>
+                                {/* <p className="mb-0 text-white">info@example.com</p> */}
                             </div>
                         </div>
                     </div>

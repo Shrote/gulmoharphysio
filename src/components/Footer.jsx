@@ -45,8 +45,8 @@ function Footer()
                         <div className="footer-item d-flex flex-column">
                             <h4 className="mb-4 text-white">Contact Info</h4>
                             <a href="https://maps.app.goo.gl/aKTaoP8qpXaasJg96"><i className="fa fa-map-marker-alt me-2"></i> Road, Dumar Dagga, Krishna Pura, Ohdar Village, Buti, Jharkhand 835217</a>
-                            <a href="mailto:ranjanrajeev555@gmail.com"><i className="fas fa-envelope me-2"></i> gulmoharphysio@gmail.com</a>
-                            <a href=""><i className="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href="mailto:gulmoharphysio@gmail.com"><i className="fas fa-envelope me-2"></i> gulmoharphysio@gmail.com</a>
+                            {/* <a href=""><i className="fas fa-envelope me-2"></i> info@example.com</a> */}
                             <a href="tel:9835131321"><i className="fas fa-phone me-2"></i> +91 98351 31321</a>
                         </div>
                     </div>
