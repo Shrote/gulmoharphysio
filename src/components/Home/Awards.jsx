@@ -26,7 +26,7 @@ const Awards = () => {
               className={`card text-white text-center`}
               style={{
                 width: "calc(100% / 4)", // Default to 4 cards visible
-                height: "250px",
+                height: "auto",
                 marginRight: "16px",
                 flexShrink: 0, // Prevent cards from shrinking
               }}
