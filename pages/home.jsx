@@ -24,7 +24,7 @@ function Home() {
         </div>
         <About/>
         <Services limit="4"/>
-        {/* <Awards /> */}
+        <Awards />
         <Feature/>
         <Appointment/>
         <Testimonial/>
