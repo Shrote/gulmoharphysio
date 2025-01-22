@@ -31,7 +31,7 @@ const Awards = () => {
                 flexShrink: 0, // Prevent cards from shrinking
               }}
             >
-              <img src={card.image} alt={card.title} className="card-img-top" />
+              <img src={card.image} alt={card.title}  />
               
             </div>
           ))}
