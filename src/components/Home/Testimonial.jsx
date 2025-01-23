@@ -6,14 +6,14 @@ function Testimonial()
         {
             "image":"img/testimonial-img.jpg",
             "name":"Vishal kumar",
-            "location":"Ranchi, India",
+            "designation":"Therapist",
             "comment":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!",
             "rating":5
         },
         {
             "image":"img/testimonial-img.jpg",
             "name":"Anmol Gupta",
-            "location":"Ranchi, India",
+            "designation":"Therapist",
             "comment":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!",
             "rating":4
         }
@@ -71,7 +71,7 @@ function Testimonial()
                     <div className="sub-style">
                         <h4 className="sub-title text-white px-3 mb-0">Testimonial</h4>
                     </div>
-                    <h1 className="display-3 mb-4">What Clients are Say</h1>
+                    <h1 className="display-3 mb-4">What Our Physicians Say</h1>
                 </div>
                 <div className="testimonial-carousel owl-carousel">
                     {testimonials.map((testimonial,index)=>(
@@ -84,7 +84,7 @@ function Testimonial()
                                 </p>
                                 <div className="text-center">
                                     <h5 className="mb-2">{testimonial.name}</h5>
-                                    <p className="mb-2 text-white-50">{testimonial.location}</p>
+                                    <p className="mb-2 text-white-50">{testimonial.designation}</p>
                                     
                                     <div className="d-flex justify-content-center">
                                     {renderStars(testimonial.rating)}
