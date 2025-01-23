@@ -24,8 +24,8 @@ function Teams()
             "instagram": "",
             "linkedin": ""
           },
-          "name": "Full Name",
-          "designation": "Rehabilitation Therapist"
+          "name": "Supriya Kumari",
+          "designation": "Physio Therapist"
         },
         {
           "delay": "0.5s",

@@ -7,8 +7,9 @@ function Footer()
                 <div className="row g-5">
                     <div className="col-md-6 col-lg-6 col-xl-3">
                         <div className="footer-item d-flex flex-column">
-                            <h4 className="text-white mb-4"><i className="fas fa-star-of-life me-3"></i>Gulmoharphysio</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem impedit eos autem dolores laudantium quia, qui similique
+                            <h4 className="text-white mb-4">Gulmoharphysio</h4>
+                            <p>
+                                Health Care with Humanity
                             </p>
                             <div className="d-flex align-items-center">
                                 <i className="fas fa-share fa-2x text-white me-2"></i>
