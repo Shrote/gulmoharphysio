@@ -25,8 +25,7 @@ function Footer()
                             <h4 className="mb-4 text-white">Quick Links</h4>
                             <a href="/about"><i className="fas fa-angle-right me-2"></i> About Us</a>
                             <a href="/contact"><i className="fas fa-angle-right me-2"></i> Contact Us</a>
-                            <a href=""><i className="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i className="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                            <a href="/privacy"><i className="fas fa-angle-right me-2"></i> Privacy Policy</a>
                             <a href="/blogs"><i className="fas fa-angle-right me-2"></i> Our Blog & News</a>
                             <a href="/gallery"><i className="fas fa-angle-right me-2"></i> Our Gallery</a>
                         </div>
@@ -36,10 +35,12 @@ function Footer()
                             <h4 className="mb-4 text-white">Our Services</h4>
                             <a href="/services"><i className="fas fa-angle-right me-2"></i> All Services</a>
                             <a><i className="fas fa-angle-right me-2"></i> Physiotherapy</a>
-                            <a><i className="fas fa-angle-right me-2"></i> Diagnostics</a>
-                            <a><i className="fas fa-angle-right me-2"></i> Manual Therapy</a>
-                            <a><i className="fas fa-angle-right me-2"></i> Massage Therapy</a>
-                            <a><i className="fas fa-angle-right me-2"></i> Rehabilitation</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Neurological</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Pediatrics</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Knee pain</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Post fracture</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Back pain</a>
+                            <a><i className="fas fa-angle-right me-2"></i> Neck Pain</a>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-3">

@@ -12,6 +12,7 @@ import Services from "../pages/services";
 import Appointment from "../pages/appointment";
 import Blogs from "../pages/blogs";
 import Gallery from "../pages/gallery";
+import Privacy from "../pages/privacy";
 
 const Home = lazy(() => import("../pages/home"));
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Router>
   );
