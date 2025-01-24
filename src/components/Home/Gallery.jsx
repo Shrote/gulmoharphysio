@@ -6,66 +6,82 @@ function Gallery({ limit }) {
     {
       img: "img/gallery/1.jpeg",
       delay: "0.1s",
+      alt: "gulmoharphysio equipment",
     },
     {
       img: "img/gallery/2.jpeg",
       delay: "0.3s",
+      alt: "gulmoharphysio equipment",
     },
     {
       img: "img/gallery/3.jpeg",
       delay: "0.5s",
+      alt: "gulmoharphysio equipment",
     },
     {
       img: "img/gallery/4.jpeg",
       delay: "0.7s",
+      alt: "gulmohar physiotherapy",
     },
     {
       img: "img/gallery/5.jpeg",
       delay: "0.1s",
+      alt: "gulmoharphysio equipment",
     },
     {
       img: "img/gallery/6.jpeg",
       delay: "0.3s",
+      alt: "gulmoharphysio facade",
     },
     {
       img: "img/gallery/7.jpeg",
       delay: "0.5s",
+      alt: "gulmoharphysio awards",
     },
     {
       img: "img/gallery/8.jpeg",
       delay: "0.7s",
+      alt: "gulmoharphysio poster",
     },
     {
       img: "img/gallery/9.jpeg",
       delay: "0.1s",
+      alt: "gulmoharphysio poster",
     },
     {
       img: "img/gallery/10.jpeg",
       delay: "0.3s",
+      alt: "gulmoharphysio poster",
     },
     {
       img: "img/gallery/11.jpeg",
       delay: "0.5s",
+      alt: "gulmoharphysio equipment",
     },
     {
       img: "img/gallery/12.jpeg",
       delay: "0.7s",
+      alt: "gulmoharphysio reception",
     },
     {
       img: "img/gallery/13.jpeg",
       delay: "0.1s",
+      alt: "gulmoharphysio facade",
     },
     {
       img: "img/gallery/14.jpeg",
       delay: "0.3s",
+      alt: "gulmoharphysio facade",
     },
     {
       img: "img/gallery/15.jpeg",
       delay: "0.5s",
+      alt: "gulmohar physiotherapy",
     },
     {
       img: "img/gallery/16.jpeg",
       delay: "0.7s",
+      alt: "gulmohar physiotherapy",
     },
   ];
 
@@ -89,6 +105,7 @@ function Gallery({ limit }) {
               key={index}
               img={service.img}
               delay={service.delay}
+              alt={service.alt}
             />
           ))}
 

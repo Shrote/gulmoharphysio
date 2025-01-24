@@ -4,7 +4,7 @@ function TeamCard(cardData)
         <div className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay={cardData.delay}>
             <div className="team-item rounded">
                 <div className="team-img rounded-top h-100">
-                    <img src={cardData.image} className="img-fluid rounded-top w-100" alt="" />
+                    <img src={cardData.image} className="img-fluid rounded-top w-100" alt={cardData.name} />
                     <div className="team-icon d-flex justify-content-center">
                         <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href={cardData.socialLinks.facebook}><i className="fab fa-facebook-f"></i></a>
                         <a className="btn btn-square btn-primary text-white rounded-circle mx-1" href={cardData.socialLinks.twitter}><i className="fab fa-twitter"></i></a>

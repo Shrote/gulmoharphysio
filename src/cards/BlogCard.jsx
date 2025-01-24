@@ -4,7 +4,7 @@ function BlogCard(cardData)
         <div className="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay={cardData.delay}>
             <div className="blog-item rounded">
                 <div className="blog-img">
-                    <img src={cardData.image} className="img-fluid w-100" alt="Image" />
+                    <img src={cardData.image} className="img-fluid w-100" alt={cardData.title} />
                 </div>
                 <div className="blog-centent p-4">
                     <div className="d-flex justify-content-between mb-4">

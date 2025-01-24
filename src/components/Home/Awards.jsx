@@ -3,11 +3,11 @@ import "../css/ScrollingCards.css";
 
 const Awards = () => {
   const cards = [
-    { title: "Card 1", image: "img/award-1.png" },
-    { title: "Card 2", image: "img/award-2.png" },
-    { title: "Card 3", image: "img/award-3.png" },
-    { title: "Card 4", image: "img/award-4.png" },
-    { title: "Card 5", image: "img/award-5.png" },
+    { title: "gulmohar awards Bimla harihar institute", image: "img/award-1.png" },
+    { title: "gulmohar awards 55th The Indian Association Of Therapy", image: "img/award-2.png" },
+    { title: "gulmohar awards Bimla harihar institute", image: "img/award-3.png" },
+    { title: "gulmohar awards The Indian Association Of Therapy", image: "img/award-4.png" },
+    { title: "gulmohar awards 55th The Indian Association Of Therapy", image: "img/award-5.png" },
     // { title: "Card 6", image: "img/service-1.png" },
   ];
 

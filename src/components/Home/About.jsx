@@ -27,9 +27,7 @@ function About() {
               <h4 className="sub-title pe-3 mb-3">President, jscpt</h4>
 
               <p className="mb-4">
-                Hello, I’m Dr. Rajeev Ranjan, the Head of the Gulmohar
-                Physiotherapy Department in Ranchi and the President of the
-                Jharkhand State Council for Physiotherapy. Over the years, I’ve
+                Over the years, I’ve
                 been dedicated to helping people recover, regain their strength,
                 and live healthier lives. At Gulmohar, our team focuses on
                 treating sports injuries, post-surgery recovery, and other
