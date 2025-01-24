@@ -4,67 +4,67 @@ import GalleryCard from "../../cards/GalleryCard";
 function Gallery({ limit }) {
   const gallery = [
     {
-      img: "img/gallery/1.JPG",
+      img: "img/gallery/1.jpeg",
       delay: "0.1s",
     },
     {
-      img: "img/gallery/2.JPG",
+      img: "img/gallery/2.jpeg",
       delay: "0.3s",
     },
     {
-      img: "img/gallery/3.JPG",
+      img: "img/gallery/3.jpeg",
       delay: "0.5s",
     },
     {
-      img: "img/gallery/4.JPG",
+      img: "img/gallery/4.jpeg",
       delay: "0.7s",
     },
     {
-      img: "img/gallery/5.JPG",
+      img: "img/gallery/5.jpeg",
       delay: "0.1s",
     },
     {
-      img: "img/gallery/6.JPG",
+      img: "img/gallery/6.jpeg",
       delay: "0.3s",
     },
     {
-      img: "img/gallery/7.JPG",
+      img: "img/gallery/7.jpeg",
       delay: "0.5s",
     },
     {
-      img: "img/gallery/8.JPG",
+      img: "img/gallery/8.jpeg",
       delay: "0.7s",
     },
     {
-      img: "img/gallery/9.JPG",
+      img: "img/gallery/9.jpeg",
       delay: "0.1s",
     },
     {
-      img: "img/gallery/10.JPG",
+      img: "img/gallery/10.jpeg",
       delay: "0.3s",
     },
     {
-      img: "img/gallery/11.JPG",
+      img: "img/gallery/11.jpeg",
       delay: "0.5s",
     },
     {
-      img: "img/gallery/12.JPG",
+      img: "img/gallery/12.jpeg",
       delay: "0.7s",
     },
     {
-      img: "img/gallery/13.JPG",
+      img: "img/gallery/13.jpeg",
       delay: "0.1s",
     },
     {
-      img: "img/gallery/14.JPG",
+      img: "img/gallery/14.jpeg",
       delay: "0.3s",
     },
     {
-      img: "img/gallery/15.JPG",
+      img: "img/gallery/15.jpeg",
       delay: "0.5s",
     },
     {
-      img: "img/gallery/16.JPG",
+      img: "img/gallery/16.jpeg",
       delay: "0.7s",
     },
   ];

@@ -3,12 +3,12 @@ import "../css/ScrollingCards.css";
 
 const Awards = () => {
   const cards = [
-    { title: "Card 1", image: "img/award-1.jpg" },
-    { title: "Card 2", image: "img/award-2.jpg" },
-    { title: "Card 3", image: "img/award-3.jpg" },
-    { title: "Card 4", image: "img/award-4.jpg" },
-    { title: "Card 5", image: "img/award-5.jpg" },
-    // { title: "Card 6", image: "img/service-1.jpg" },
+    { title: "Card 1", image: "img/award-1.png" },
+    { title: "Card 2", image: "img/award-2.png" },
+    { title: "Card 3", image: "img/award-3.png" },
+    { title: "Card 4", image: "img/award-4.png" },
+    { title: "Card 5", image: "img/award-5.png" },
+    // { title: "Card 6", image: "img/service-1.png" },
   ];
 
   return (

@@ -50,6 +50,18 @@ function Teams()
           },
           "name": "Full Name",
           "designation": "Doctor of Physical therapy"
+        },
+        {
+          "delay": "0.1s",
+          "image": "img/team-5.jpg",
+          "socialLinks": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": ""
+          },
+          "name": "Full Name",
+          "designation": "Doctor of Physical therapy"
         }
       ]
       
