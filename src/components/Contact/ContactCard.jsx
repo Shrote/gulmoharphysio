@@ -1,57 +1,156 @@
-function ContactCard()
-{
-    return(
+import React, { useState } from "react";
+import { db } from "../../../firebaseConfig"; 
+import { collection, addDoc } from "firebase/firestore";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function ContactCard() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        project: "",
+        subject: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            // Save data to Firestore
+            await addDoc(collection(db, "contacts"), formData);
+
+            // Send Email
+            await fetch("http://localhost:5000/send-contact-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+            toast.success("Thanks for Contacting. We will reach you Soon")
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                project: "",
+                subject: "",
+                message: "",
+            });
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            
+            toast.error("Something went wrong we are working on this issue!")
+        }
+    };
+
+    return (
         <div className="container-fluid contact py-5">
             <div className="container py-5">
-                <div className="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div className="section-title mb-5">
                     <div className="sub-style mb-4">
                         <h4 className="sub-title text-white px-3 mb-0">Contact Us</h4>
                     </div>
                 </div>
                 <div className="row g-4 align-items-center">
-                    <div className="col-lg-5 col-xl-5 contact-form wow fadeInLeft" data-wow-delay="0.1s">
+                    <div className="col-lg-5 col-xl-5 contact-form">
                         <h2 className="display-5 text-white mb-2">Get in Touch</h2>
                         <p className="mb-4 text-white">We would love to hear from you! Please fill in the required details and our team will get in touch with you.</p>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="row g-3">
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="form-floating">
-                                        <input type="text" className="form-control bg-transparent border border-white" id="name" placeholder="Your Name" />
-                                        <label for="name">Your Name</label>
+                                        <input
+                                            type="text"
+                                            className="form-control bg-transparent border border-white"
+                                            id="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            placeholder="Your Name"
+                                            required
+                                        />
+                                        <label htmlFor="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="form-floating">
-                                        <input type="email" className="form-control bg-transparent border border-white" id="email" placeholder="Your Email" />
-                                        <label for="email">Your Email</label>
+                                        <input
+                                            type="email"
+                                            className="form-control bg-transparent border border-white"
+                                            id="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="Your Email"
+                                            required
+                                        />
+                                        <label htmlFor="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="form-floating">
-                                        <input type="phone" className="form-control bg-transparent border border-white" id="phone" placeholder="Phone" />
-                                        <label for="phone">Your Phone</label>
+                                        <input
+                                            type="text"
+                                            className="form-control bg-transparent border border-white"
+                                            id="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            placeholder="Your Phone"
+                                            required
+                                        />
+                                        <label htmlFor="phone">Your Phone</label>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-xl-6">
                                     <div className="form-floating">
-                                        <input type="text" className="form-control bg-transparent border border-white" id="project" placeholder="Project" />
-                                        <label for="project">Your Project</label>
+                                        <input
+                                            type="text"
+                                            className="form-control bg-transparent border border-white"
+                                            id="project"
+                                            value={formData.project}
+                                            onChange={handleChange}
+                                            placeholder="Your Project"
+                                            required
+                                        />
+                                        <label htmlFor="project">Your Project</label>
                                     </div>
                                 </div>
                                 <div className="col-12">
                                     <div className="form-floating">
-                                        <input type="text" className="form-control bg-transparent border border-white" id="subject" placeholder="Subject" />
-                                        <label for="subject">Subject</label>
+                                        <input
+                                            type="text"
+                                            className="form-control bg-transparent border border-white"
+                                            id="subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            placeholder="Subject"
+                                            required
+                                        />
+                                        <label htmlFor="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div className="col-12">
                                     <div className="form-floating">
-                                        <textarea className="form-control bg-transparent border border-white" placeholder="Leave a message here" id="message" style={{height: "160px"}}></textarea>
-                                        <label for="message">Message</label>
+                                        <textarea
+                                            className="form-control bg-transparent border border-white"
+                                            placeholder="Leave a message here"
+                                            id="message"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            style={{ height: "160px" }}
+                                            required
+                                        ></textarea>
+                                        <label htmlFor="message">Message</label>
                                     </div>
                                 </div>
                                 <div className="col-12">
-                                    <button className="btn btn-light text-primary w-100 py-3">Send Message</button>
+                                    <button
+                                        type="submit"
+                                        className="btn btn-light text-primary w-100 py-3"
+                                    >
+                                        Send Message
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -92,9 +191,9 @@ function ContactCard()
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
-    )
+    );
 }
 
-export default ContactCard
-
+export default ContactCard;

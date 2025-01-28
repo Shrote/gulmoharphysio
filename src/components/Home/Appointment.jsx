@@ -1,5 +1,53 @@
+import React, { useState } from "react";
+import { db } from "../../../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Appointment()
 {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        email: "",
+        phone: "",
+        gender: "",
+        date: "",
+        department: "",
+        comments: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            // Save data to Firestore
+            await addDoc(collection(db, "appointments"), formData);
+
+            // Send Email
+            await fetch("http://localhost:5000/send-appointment-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            toast.success("Your appointment request has been submitted successfully!");
+            setFormData({
+                firstName: "",
+                email: "",
+                phone: "",
+                gender: "",
+                date: "",
+                department: "",
+                comments: "",
+            });
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            toast.error("Something went wrong we are working on this issue!")
+        }
+    };
     return(
     <>
         <div className="container-fluid appointment py-5">
@@ -38,41 +86,99 @@ function Appointment()
                         <div className="appointment-form rounded p-5">
                             <p className="fs-4 text-uppercase text-primary">Get In Touch</p>
                             <h1 className="display-5 mb-4">Get Appointment</h1>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="row gy-3 gx-4">
                                     <div className="col-xl-6">
-                                        <input type="text" className="form-control py-3 border-primary bg-transparent text-white" placeholder="First Name" />
+                                        <input
+                                            type="text"
+                                            className="form-control py-3 border-primary bg-transparent text-white"
+                                            id="firstName"
+                                            value={formData.firstName}
+                                            onChange={handleChange}
+                                            placeholder="First Name"
+                                            required
+                                        />
                                     </div>
                                     <div className="col-xl-6">
-                                        <input type="email" className="form-control py-3 border-primary bg-transparent text-white" placeholder="Email" />
+                                        <input
+                                            type="email"
+                                            className="form-control py-3 border-primary bg-transparent text-white"
+                                            id="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="Email"
+                                            required
+                                        />
                                     </div>
                                     <div className="col-xl-6">
-                                        <input type="phone" className="form-control py-3 border-primary bg-transparent" placeholder="Phone" />
+                                        <input
+                                            type="tel"
+                                            className="form-control py-3 border-primary bg-transparent"
+                                            id="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            placeholder="Phone"
+                                            required
+                                        />
                                     </div>
                                     <div className="col-xl-6">
-                                        <select className="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
-                                            <option >Your Gender</option>
-                                            <option value="1">Male</option>
-                                            <option value="2">FeMale</option>
-                                            <option value="3">Others</option>
+                                        <select
+                                            className="form-select py-3 border-primary bg-transparent"
+                                            id="gender"
+                                            value={formData.gender}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="">Your Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
                                     <div className="col-xl-6">
-                                        <input type="date" className="form-control py-3 border-primary bg-transparent" />
+                                        <input
+                                            type="date"
+                                            className="form-control py-3 border-primary bg-transparent"
+                                            id="date"
+                                            value={formData.date}
+                                            onChange={handleChange}
+                                            required
+                                            min={new Date().toISOString().split("T")[0]}
+                                        />
                                     </div>
                                     <div className="col-xl-6">
-                                        <select className="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
-                                            <option >Department</option>
-                                            <option value="1">Physiotherapy</option>
-                                            <option value="2">Physical Helth</option>
-                                            <option value="2">Treatments</option>
+                                        <select
+                                            className="form-select py-3 border-primary bg-transparent"
+                                            id="department"
+                                            value={formData.department}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="">Department</option>
+                                            <option value="Physiotherapy">Physiotherapy</option>
+                                            <option value="Physical Health">Physical Health</option>
+                                            <option value="Treatments">Treatments</option>
                                         </select>
                                     </div>
                                     <div className="col-12">
-                                        <textarea className="form-control border-primary bg-transparent text-white" name="text" id="area-text" cols="30" rows="5" placeholder="Write Comments"></textarea>
+                                        <textarea
+                                            className="form-control border-primary bg-transparent text-white"
+                                            id="comments"
+                                            value={formData.comments}
+                                            onChange={handleChange}
+                                            cols="30"
+                                            rows="5"
+                                            placeholder="Write Comments"
+                                            required
+                                        ></textarea>
                                     </div>
                                     <div className="col-12">
-                                        <button type="button" className="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary text-white w-100 py-3 px-5"
+                                        >
+                                            SUBMIT NOW
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -103,7 +209,7 @@ function Appointment()
                 </div>
             </div>
         </div>
-
+        <ToastContainer />
     </>
     )
 }

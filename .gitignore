@@ -26,3 +26,4 @@ dist-ssr
 # src/components/Home/Awards.jsx
 src/components/css/ScrollableGallery.module.css
 # pages/awards.jsx
+.env
