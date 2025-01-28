@@ -1,217 +1,189 @@
 import React, { useState } from "react";
-import { db } from "../../../firebaseConfig";
-import { collection, addDoc } from "firebase/firestore";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function Appointment()
-{
-    const [formData, setFormData] = useState({
-        firstName: "",
-        email: "",
-        phone: "",
-        gender: "",
-        date: "",
-        department: "",
-        comments: "",
-    });
+function Appointment() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    email: "",
+    phone: "",
+    gender: "",
+    date: "",
+    department: "",
+    comments: "",
+  });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      access_key: "2645e937-b323-4193-b321-5314325a7916", // Replace with your Web3Forms access key
+      name: formData.firstName,
+      email: formData.email,
+      phone: formData.phone,
+      gender: formData.gender,
+      date: formData.date,
+      department: formData.department,
+      comments: formData.comments,
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            // Save data to Firestore
-            await addDoc(collection(db, "appointments"), formData);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-            // Send Email
-            await fetch("http://localhost:5000/send-appointment-email", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Your appointment request has been submitted successfully!");
+        setFormData({
+          firstName: "",
+          email: "",
+          phone: "",
+          gender: "",
+          date: "",
+          department: "",
+          comments: "",
+        });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
+  };
 
-            toast.success("Your appointment request has been submitted successfully!");
-            setFormData({
-                firstName: "",
-                email: "",
-                phone: "",
-                gender: "",
-                date: "",
-                department: "",
-                comments: "",
-            });
-        } catch (error) {
-            console.error("Error submitting form:", error);
-            toast.error("Something went wrong we are working on this issue!")
-        }
-    };
-    return(
+  return (
     <>
-        <div className="container-fluid appointment py-5">
-            <div className="container py-5">
-                <div className="row g-5 align-items-center">
-                    <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
-                        <div className="section-title text-start">
-                            <h4 className="sub-title pe-3 mb-0">Solutions To Your Pain</h4>
-                            <h1 className="display-4 mb-4">Best Quality Services With Minimal Pain Rate</h1>
-                            <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                            <div className="row g-4">
-                                <div className="col-sm-6">
-                                    <div className="d-flex flex-column h-100">
-                                        <div className="mb-4">
-                                            <h5 className="mb-3"><i className="fa fa-check text-primary me-2"></i> Body Relaxation</h5>
-                                            <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt qui cupiditate veritatis enim ducimus.</p>
-                                        </div>
-                                        <div className="mb-4">
-                                            <h5 className="mb-3"><i className="fa fa-check text-primary me-2"></i> Body Relaxation</h5>
-                                            <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt qui cupiditate veritatis enim ducimus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6">
-                                    <div className="video h-100">
-                                        <img src="img/video-img.jpg" className="img-fluid rounded w-100 h-100" style={{objectFit: "cover"}} alt="" />
-                                        <button type="button" className="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                                            <span></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                        <div className="appointment-form rounded p-5">
-                            <p className="fs-4 text-uppercase text-primary">Get In Touch</p>
-                            <h1 className="display-5 mb-4">Get Appointment</h1>
-                            <form onSubmit={handleSubmit}>
-                                <div className="row gy-3 gx-4">
-                                    <div className="col-xl-6">
-                                        <input
-                                            type="text"
-                                            className="form-control py-3 border-primary bg-transparent text-white"
-                                            id="firstName"
-                                            value={formData.firstName}
-                                            onChange={handleChange}
-                                            placeholder="First Name"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="col-xl-6">
-                                        <input
-                                            type="email"
-                                            className="form-control py-3 border-primary bg-transparent text-white"
-                                            id="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            placeholder="Email"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="col-xl-6">
-                                        <input
-                                            type="tel"
-                                            className="form-control py-3 border-primary bg-transparent"
-                                            id="phone"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            placeholder="Phone"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="col-xl-6">
-                                        <select
-                                            className="form-select py-3 border-primary bg-transparent"
-                                            id="gender"
-                                            value={formData.gender}
-                                            onChange={handleChange}
-                                            required
-                                        >
-                                            <option value="">Your Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div className="col-xl-6">
-                                        <input
-                                            type="date"
-                                            className="form-control py-3 border-primary bg-transparent"
-                                            id="date"
-                                            value={formData.date}
-                                            onChange={handleChange}
-                                            required
-                                            min={new Date().toISOString().split("T")[0]}
-                                        />
-                                    </div>
-                                    <div className="col-xl-6">
-                                        <select
-                                            className="form-select py-3 border-primary bg-transparent"
-                                            id="department"
-                                            value={formData.department}
-                                            onChange={handleChange}
-                                            required
-                                        >
-                                            <option value="">Department</option>
-                                            <option value="Physiotherapy">Physiotherapy</option>
-                                            <option value="Physical Health">Physical Health</option>
-                                            <option value="Treatments">Treatments</option>
-                                        </select>
-                                    </div>
-                                    <div className="col-12">
-                                        <textarea
-                                            className="form-control border-primary bg-transparent text-white"
-                                            id="comments"
-                                            value={formData.comments}
-                                            onChange={handleChange}
-                                            cols="30"
-                                            rows="5"
-                                            placeholder="Write Comments"
-                                            required
-                                        ></textarea>
-                                    </div>
-                                    <div className="col-12">
-                                        <button
-                                            type="submit"
-                                            className="btn btn-primary text-white w-100 py-3 px-5"
-                                        >
-                                            SUBMIT NOW
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+      <div className="container-fluid appointment py-5">
+        <div className="container py-5">
+          <div className="row g-5 align-items-center">
+            <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2">
+              <div className="section-title text-start">
+                <h4 className="sub-title pe-3 mb-0">Solutions To Your Pain</h4>
+                <h1 className="display-4 mb-4">Best Quality Services With Minimal Pain Rate</h1>
+                <p className="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti
+                  amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius
+                  nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!
+                </p>
+              </div>
             </div>
-        </div>
-        <div className="modal fade" id="videoModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content rounded-0">
-                    <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">YouTube Video</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
+              <div className="appointment-form rounded p-5">
+                <p className="fs-4 text-uppercase text-primary">Get In Touch</p>
+                <h1 className="display-5 mb-4">Get Appointment</h1>
+                <form onSubmit={handleSubmit}>
+                  <div className="row gy-3 gx-4">
+                    <div className="col-xl-6">
+                      <input
+                        type="text"
+                        className="form-control py-3 border-primary bg-transparent text-white"
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        placeholder="First Name"
+                        required
+                      />
                     </div>
-                    <div className="modal-body">
-                        {/* 16:9 aspect ratio */}
-                        <div className="ratio ratio-16x9">
-                            <iframe
-                                className="embed-responsive-item"
-                                src="https://www.youtube.com/embed/-pvt6tQsOqQ"
-                                id="video"
-                                allowFullScreen
-                                allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
-                            ></iframe>
-                        </div>
+                    <div className="col-xl-6">
+                      <input
+                        type="email"
+                        className="form-control py-3 border-primary bg-transparent text-white"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Email"
+                        required
+                      />
                     </div>
-                </div>
+                    <div className="col-xl-6">
+                      <input
+                        type="tel"
+                        className="form-control py-3 border-primary bg-transparent"
+                        id="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+                    <div className="col-xl-6">
+                      <select
+                        className="form-select py-3 border-primary bg-transparent"
+                        id="gender"
+                        value={formData.gender}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="">Your Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div className="col-xl-6">
+                      <input
+                        type="date"
+                        className="form-control py-3 border-primary bg-transparent"
+                        id="date"
+                        value={formData.date}
+                        onChange={handleChange}
+                        required
+                        min={new Date().toISOString().split("T")[0]}
+                      />
+                    </div>
+                    <div className="col-xl-6">
+                      <select
+                        className="form-select py-3 border-primary bg-transparent"
+                        id="department"
+                        value={formData.department}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="">Department</option>
+                        <option value="Physiotherapy">Physiotherapy</option>
+                        <option value="Physical Health">Physical Health</option>
+                        <option value="Treatments">Treatments</option>
+                      </select>
+                    </div>
+                    <div className="col-12">
+                      <textarea
+                        className="form-control border-primary bg-transparent text-white"
+                        id="comments"
+                        value={formData.comments}
+                        onChange={handleChange}
+                        cols="30"
+                        rows="5"
+                        placeholder="Write Comments"
+                        required
+                      ></textarea>
+                    </div>
+                    <div className="col-12">
+                      <button
+                        type="submit"
+                        className="btn btn-primary text-white w-100 py-3 px-5"
+                      >
+                        SUBMIT NOW
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-        <ToastContainer />
+      </div>
+      <ToastContainer />
     </>
-    )
+  );
 }
 
-export default Appointment
+export default Appointment;
