@@ -765,9 +765,6 @@
   margin-bottom: 145px;
 }
 
-.team .team-item:hover .team-img::before {
-  background: rgba(21, 185, 217, 0.3);
-}
 
 .team .team-item .team-content {
   color: var(--bs-primary);
@@ -779,14 +776,7 @@
   transition: 0.5s;
 }
 
-.team .team-item:hover .team-content h5 {
-  color: var(--bs-dark);
-}
 
-.team .team-item:hover .team-content {
-  background: var(--bs-primary);
-  color: var(--bs-white);
-}
 /*** Team End ***/
 
 /*** testimonial Start ***/
