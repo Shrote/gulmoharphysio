@@ -12,43 +12,43 @@ function Feature()
         {
           icon: "fas fa-briefcase-medical fa-4x text-primary",
           title: "Personalized Treatment",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "We create treatment plans tailored to your specific needs for better healing.",
           delay: "0.3s"
         },
         {
           icon: "fas fa-hospital-user fa-4x text-primary",
           title: "Therapy Goals",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "We set clear, achievable goals to track your recovery and progress.",
           delay: "0.5s"
         },
         {
           icon: "fas fa-users fa-4x text-primary",
           title: "Practitioners Network",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "Our network of specialists works together to support your healing.",
           delay: "0.7s"
         },
         {
           icon: "fas fa-spa fa-4x text-primary",
           title: "Comfortable Center",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "Our clinic offers a calming space to focus on your recovery.",
           delay: "0.1s"
         },
         {
           icon: "fas fa-heart fa-4x text-primary",
           title: "Experienced Stuff",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "Our experienced staff ensures the highest standard of care for your recovery.",
           delay: "0.3s"
         },
         {
           icon: "fab fa-pied-piper fa-4x text-primary",
           title: "Therapy Goals",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "We help you achieve your goals with steady progress toward better health.",
           delay: "0.5s"
         },
         {
           icon: "fas fa-user-md fa-4x text-primary",
           title: "Licensed Therapist",
-          description: "Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus,",
+          description: "Our licensed therapists are dedicated to your pain relief and mobility improvement.",
           delay: "0.7s"
         }
       ];

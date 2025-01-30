@@ -41,7 +41,7 @@ function Blog({ limit })
                         <h4 className="sub-title px-3 mb-0">Our Blog</h4>
                     </div>
                     <h1 className="display-3 mb-4">Excellent Facility and High Quality Therapy</h1>
-                    <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+                    <p className="mb-0">Stay informed with our latest articles on physiotherapy, wellness tips, and recovery strategies. We share valuable insights to help you manage pain, improve mobility, and lead a healthier lifestyle.</p>
                 </div>
                 <div className="row g-4 justify-content-center">
                 {displayedBlogs.map((blog,index)=>(

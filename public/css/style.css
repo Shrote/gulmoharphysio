@@ -619,7 +619,9 @@
 }
 
 .appointment .appointment-form {
-  background: rgba(239, 162, 134, 0.3);
+  background: rgba(134, 239, 150, 0.3);
+  color: black;
+
 }
 
 .appointment .appointment-form .btn.btn-primary {
