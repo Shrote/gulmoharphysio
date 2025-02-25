@@ -205,6 +205,7 @@ export default function ReviewSlider() {
                 alt={review.author.name}
                 className={styles.profileImage}
               />
+              <p>Google Map Reviews</p>
               <div className={styles.profileInfo}>
                 <h4>{review.author.name}</h4>
                 <p>{review.author.position}</p>
