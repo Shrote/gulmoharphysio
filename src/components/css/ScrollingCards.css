@@ -1,0 +1,27 @@
+.scrolling-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .scrolling-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Media query for mobile devices (max width 768px) */
+  @media (max-width: 768px) {
+    .scrolling-track .card {
+      width: calc(100% / 2) !important; /* Show 2 cards at a time on mobile */
+    }
+  }
+  
