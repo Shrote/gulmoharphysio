@@ -176,12 +176,13 @@ const reviews = [
 
 export default function ReviewSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsToShow = window.innerWidth < 768 ? 1 : 2;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === reviews.length - 2 ? 0 : prevIndex + 1
-      );
+        prevIndex >=  (reviews.length/itemsToShow)-1 ? 0 : prevIndex + 1
+    );
     }, 5000);
 
     return () => clearInterval(interval);
@@ -189,13 +190,13 @@ export default function ReviewSlider() {
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? reviews.length - 2 : prevIndex - 1
+      prevIndex === 0 ? (reviews.length / itemsToShow)-1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === reviews.length - 2 ? 0 : prevIndex + 1
+      prevIndex >= (reviews.length/itemsToShow)-1 ? 0 : prevIndex + 1
     );
   };
 
@@ -208,7 +209,7 @@ export default function ReviewSlider() {
 
       <div
         className={styles.reviewSlider}
-        style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
+        style={{ transform: `translateX(calc(-${currentIndex} * (100% - 25px)))` }}
       >
         {reviews.map((review) => (
           <div key={review.id} className={styles.reviewCard}>
