@@ -13,6 +13,7 @@ import Appointment from "../pages/appointment";
 import Blogs from "../pages/blogs";
 import Gallery from "../pages/gallery";
 import Privacy from "../pages/privacy";
+import ChatbotComponent from "./ChatbotComponent";
 
 const Home = lazy(() => import("../pages/home"));
 
@@ -44,6 +45,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
+      <ChatbotComponent/>
     </Router>
   );
 }
