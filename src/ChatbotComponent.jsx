@@ -16,7 +16,7 @@ const ChatbotComponent = () => {
         className="fixed-bottom m-3 p-3 "
         style={{borderRadius:"50%", width:"60px", backgroundColor:"var(--bs-primary)"}}
       >
-        <i class="bi bi-chat-left-dots-fill"></i>
+        <i className="bi bi-chat-left-dots-fill"></i>
       </button>
 
       {showChat && (

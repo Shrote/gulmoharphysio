@@ -179,13 +179,13 @@ function ContactCard() {
                             <div className="d-flex flex-column align-items-center text-center mb-4">
                                 <div className="bg-white d-flex align-items-center justify-content-center mb-3" style={{width: "90px", height: "90px", borderRadius: "50px"}}><i className="fa fa-phone-alt fa-2x text-primary"></i></div>
                                 <h4 className="text-dark">Mobile</h4>
-                                <p className="mb-0 text-white"><a class="text-white" href="tel:9835131321">+91 98351 31321</a></p>
+                                <p className="mb-0 text-white"><a className="text-white" href="tel:9835131321">+91 98351 31321</a></p>
                             </div>
                            
                             <div className="d-flex flex-column align-items-center text-center">
                                 <div className="bg-white d-flex align-items-center justify-content-center mb-3" style={{width: "90px", height: "90px", borderRadius: "50px"}}><i className="fa fa-envelope-open fa-2x text-primary"></i></div>
                                 <h4 className="text-dark">Email</h4>
-                                <p className="mb-0"><a href="mailto:gulmoharphysio@gmail.com" class="text-white">gulmoharphysio@gmail.com</a></p>
+                                <p className="mb-0"><a href="mailto:gulmoharphysio@gmail.com" className="text-white">gulmoharphysio@gmail.com</a></p>
                                 {/* <p className="mb-0 text-white">info@example.com</p> */}
                             </div>
                         </div>
@@ -199,8 +199,7 @@ function ContactCard() {
                         </div>
                         <div className="rounded h-100">
                             <iframe className="rounded w-100" 
-                            style={{height: "500px"}} src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Gulmohar Hospital in ranchi&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            style={{height: "500px"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.614402982258!2d85.39318399999999!3d23.4060231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e39f809eb7cb%3A0x145a8585be822eea!2sGulmohar%20Physiotherapy!5e1!3m2!1sen!2sin!4v1741506055977!5m2!1sen!2sin" width="600" height="400"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 
