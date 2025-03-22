@@ -65,6 +65,30 @@ function Teams() {
       name: "Ajit Kumar",
       designation: "Physio Therapist",
     },
+     {
+      delay: "0.7s",
+      image: "img/team-7.jpg",
+      socialLinks: {
+        facebook: "",
+        twitter: "",
+        instagram: "",
+        linkedin: "",
+      },
+      name: "Alok Kumar",
+      designation: "Physio Therapist",
+    },
+     {
+      delay: "0.7s",
+      image: "img/team-8.jpg",
+      socialLinks: {
+        facebook: "",
+        twitter: "",
+        instagram: "",
+        linkedin: "",
+      },
+      name: "Anup Kumar",
+      designation: "Physio Therapist",
+    },
     {
       delay: "0.7s",
       image: "img/team-6.jpg",
