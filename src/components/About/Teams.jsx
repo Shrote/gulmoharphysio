@@ -74,7 +74,7 @@ function Teams() {
         instagram: "",
         linkedin: "",
       },
-      name: "Alok Kumar",
+      name: "Santosh Kumar",
       designation: "Physio Therapist",
     },
      {
@@ -86,7 +86,7 @@ function Teams() {
         instagram: "",
         linkedin: "",
       },
-      name: "Anup Kumar",
+      name: "Kamalesh Kumar Singh",
       designation: "Physio Therapist",
     },
     {

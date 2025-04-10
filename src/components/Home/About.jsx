@@ -19,7 +19,7 @@ function About() {
               <div className="about-img-inner">
                 <img
                   src="img/about-2.jpg"
-                  className="img-fluid rounded-circle w-100 h-100"
+                  className="img-fluid rounded-circle w-100"
                   alt="Image"
                 />
               </div>

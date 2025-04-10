@@ -15,8 +15,6 @@ function Home() {
         <NavBar />
         </div>
         <Header route="About" title="About Us" img="carousel-2.jpg"/>
-        <>
-        </>
         <Teams/>
         <Footer/>
         <ToTop/>
