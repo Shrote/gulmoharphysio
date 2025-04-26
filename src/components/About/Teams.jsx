@@ -113,7 +113,7 @@ function Teams() {
         >
           <div className="text-center mb-4">
             <img
-              src="img/dr-rajeev-ranjan.jpg"
+              src="img/about-2.png"
               alt="Dr. Rajeev Ranjan"
               className="img-fluid rounded-circle"
               style={{ width: "150px", height: "150px" }}

@@ -1,6 +1,6 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 
-const botName = "Shrote Assistant";
+const botName = "Gulmohar Assistant";
 
 const config = {
   botName: botName,

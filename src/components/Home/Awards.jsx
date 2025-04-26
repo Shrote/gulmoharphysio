@@ -25,6 +25,7 @@ const Awards = () => {
 
   return (
     <div className="container my-5">
+      {/* <img className="award-background" src="./img/award-background.png" alt="" /> */}
       <div className="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <h4 className="text-primary px-3 mb-2">Awards & Acheivments </h4>
         <p className="mb-0">

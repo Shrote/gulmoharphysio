@@ -374,7 +374,9 @@
 
 .header-carousel .owl-nav .owl-prev,
 .header-carousel .owl-nav .owl-next {
-  transition: 0.5s;
+  /* transition: 0.5s; */
+  display: none;
+
 }
 
 .header-carousel .owl-nav .owl-prev:hover,
@@ -386,8 +388,9 @@
 @media (max-width: 576px) {
   .header-carousel .owl-nav .owl-prev,
   .header-carousel .owl-nav .owl-next {
-    top: 350px;
-    transition: 0.5s;
+    /* top: 450px;
+    transition: 0.5s; */
+    display: none;
   }
 
   .header-carousel
@@ -774,8 +777,9 @@ body {
 
   .btn {
     /* width: 100%; */
-    padding: 10px 24px;
+    /* padding: 10px 24px; */
     font-size: 14px;
+
   }
 }
 /*** About End ***/
@@ -1490,6 +1494,9 @@ a {
 
   /* Update these styles in your existing style.css */
 
+  .award-background{
+    position: absolute;
+  }
   .awards-carousel {
     position: relative;
     width: 100%;
@@ -1573,9 +1580,4 @@ a {
       padding-right: 2rem;
     }
   }
-
-  /* Review Section Styles */
-
-
-  /* Rest of your existing CSS... */
 }

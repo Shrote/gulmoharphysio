@@ -13,28 +13,28 @@ class ActionProvider {
 
   handleAppointment = () => {
     const message = this.createChatBotMessage(
-      "You can book an appointment by visiting our Contact page or calling us directly at +91-XXXXXXXXXX."
+      "You can book an appointment by visiting our Contact page or calling us directly at +91 9835131321."
     );
     this.updateChatbotState(message);
   };
 
   handleHours = () => {
     const message = this.createChatBotMessage(
-      "Our clinic operates from Monday to Saturday, 9:00 AM to 7:00 PM. We're closed on Sundays."
+      "Our clinic operates from Monday to Sunday, 9:00 AM to 7:00 PM."
     );
     this.updateChatbotState(message);
   };
 
   handleLocation = () => {
     const message = this.createChatBotMessage(
-      "We are located at  Road, Dumar Dagga, Krishna Pura, Ohdar Village, Buti, Jharkhand."
+      "We are located at Road, Dumar Dagga, Krishna Pura, Ohdar Village, Buti, Jharkhand."
     );
     this.updateChatbotState(message);
   };
 
   handleHomeService = () => {
     const message = this.createChatBotMessage(
-      "Yes, we do offer home physiotherapy services. Please contact us for availability and pricing."
+      "Yes, we offer home physiotherapy services. Please contact us for availability and pricing."
     );
     this.updateChatbotState(message);
   };
@@ -77,6 +77,69 @@ class ActionProvider {
   handleContact = () => {
     const message = this.createChatBotMessage(
       "You can contact us through our website's contact form or call us at +91 98351 31321."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleCost = () => {
+    const message = this.createChatBotMessage(
+      "Treatment costs vary based on the service. Please contact us directly for a detailed quotation."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleDoctors = () => {
+    const message = this.createChatBotMessage(
+      "Our team includes experienced physiotherapists and specialists. You can view their profiles on our website or call us to know more."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleEmergency = () => {
+    const message = this.createChatBotMessage(
+      "In case of an emergency, please call us directly at +91 9835131321. We will guide you accordingly."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleConditionsTreated = () => {
+    const message = this.createChatBotMessage(
+      "We treat conditions like back pain, sports injuries, arthritis, post-stroke rehab, joint pain, and mobility impairments."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleReferral = () => {
+    const message = this.createChatBotMessage(
+      "No doctor's referral is needed. You can directly book an appointment with us."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleFemaleTherapists = () => {
+    const message = this.createChatBotMessage(
+      "Yes, female physiotherapists are available upon request. Please inform us while booking."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleCovidMeasures = () => {
+    const message = this.createChatBotMessage(
+      "We follow strict COVID-19 safety protocols including regular sanitization, mandatory masks, and social distancing."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleParking = () => {
+    const message = this.createChatBotMessage(
+      "Yes, we have parking facilities available for our patients."
+    );
+    this.updateChatbotState(message);
+  };
+
+  handlePayments = () => {
+    const message = this.createChatBotMessage(
+      "We accept cash, credit/debit cards, and digital payments like UPI and Paytm."
     );
     this.updateChatbotState(message);
   };
