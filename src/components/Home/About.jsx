@@ -10,15 +10,15 @@ function About() {
         <div className="row g-5 align-items-center">
           <div className="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
             <div className="about-img pb-5 ps-5">
-              <img
+              {/* <img
                 src="img/about-1.jpg"
                 className="img-fluid rounded w-100"
                 style={{ objectFit: "cover" }}
                 alt="Image"
-              />
+              /> */}
               <div className="about-img-inner">
                 <img
-                  src="img/about-2.jpg"
+                  src="img/about-2.png"
                   className="img-fluid rounded-circle w-100"
                   alt="Image"
                 />
